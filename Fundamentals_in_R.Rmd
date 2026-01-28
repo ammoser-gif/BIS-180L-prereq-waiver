@@ -1,0 +1,10 @@
+---
+title: "Fundamentals in R"
+output: html_document
+---
+# Installing swirl
+```{r}
+install.packages("swirl") # Install Swirl
+library(swirl) # Load swirl package
+swirl() # Start Swirl Tutorial
+```
