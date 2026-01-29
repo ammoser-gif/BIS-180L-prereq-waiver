@@ -1,0 +1,21 @@
+---
+title: "Tidyverse"
+name: Arden Moser
+output: html_document
+---
+# Load Tidyverse
+```{r}
+library(tidyverse)
+```
+# Import data file
+```{r}
+height_data <- read.csv("height_data_clean.csv") # Import file
+summary(height_data) # View structure, contents, and dimensions of data file
+```
+# Data Analysis
+```{r}
+height_data %>% 
+  filter(survey_date == "2023-01-27") %>% # Retain data only from January 27, 2023
+  group_by(pop) %>% # Group values by population
+  summarise(average_height_cm = mean(height_cm)) # Calculate average height for each population
+```
