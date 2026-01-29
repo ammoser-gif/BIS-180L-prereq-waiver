@@ -1,0 +1,59 @@
+---
+title: "Assignment_3_template_1"
+name: Arden Moser
+output: html_document
+---
+\
+*I was unable to download the Assignment 3 template so I had to start from scratch*
+\
+# Practice with R
+## Excercise 1
+```{r}
+sum(2000,20000)
+```
+
+# Objects
+## Excercise 2
+```{r}
+a <- 5
+b <- 2:20
+a
+b
+```
+The first two lines assign variables: a was assigned with a value of 5, b was assigned with a vector of values between 2 and 20.  The last two lines simply print the contents of each variable.
+
+## Excercise 3
+```{r}
+sum1 <- a + b
+sum2 <- sum(a,b)
+```
+```sum()``` gives a different result than ```+```.  ```+``` adds a to each value in b, giving a vector of 19 elements.  ```sum()``` adds all values in b and a, giving the total as a single value.
+
+## Excercise 4
+```{r}
+b[5] + b[10]
+```
+The sum of the 5th and 10th elements of b is 17.
+
+## Excercise 5
+```{r}
+b[3] + b[8] + b[10]
+```
+The sum of the 3rd, 8th, and 10th elements of b is 24.
+
+# 2 Dimensional Objects
+## Excercise 6
+When extracting from a 2-dimensional object, the **first number specifies rows** and the **second number specifies columns**.
+\
+\
+```m[3,]``` extracts all elements in row 3.
+\
+\
+To extract the 3rd, 4th, and 5th columns as one object, you must type ```m[,3:5]```.
+
+## Excercise 7
+```{r}
+m <- matrix(data=1:25,ncol=5,byrow=T)
+cbind(m,101:105)
+```
+```cbind()``` adds a new column to the right side of the table.  The first dimension specifies the data table, *m* in this case.  The second dimension specifics the contents of the new column, which are values between 101 and 105 in this case.

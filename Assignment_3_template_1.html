@@ -11,7 +11,7 @@
 
 
 
-<title>Fundamentals in R</title>
+<title>Assignment_3_template_1</title>
 
 <script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
 // be compatible with the behavior of Pandoc < 2.8).
@@ -348,12 +348,82 @@ display: none;
 
 
 
-<h1 class="title toc-ignore">Fundamentals in R</h1>
+<h1 class="title toc-ignore">Assignment_3_template_1</h1>
 
 </div>
 
 
-
+<p><br />
+<em>I was unable to download the Assignment 3 template so I had to start
+from scratch</em><br />
+# Practice with R ## Excercise 1</p>
+<pre class="r"><code>sum(2000,20000)</code></pre>
+<pre><code>## [1] 22000</code></pre>
+<div id="objects" class="section level1">
+<h1>Objects</h1>
+<div id="excercise-2" class="section level2">
+<h2>Excercise 2</h2>
+<pre class="r"><code>a &lt;- 5
+b &lt;- 2:20
+a</code></pre>
+<pre><code>## [1] 5</code></pre>
+<pre class="r"><code>b</code></pre>
+<pre><code>##  [1]  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20</code></pre>
+<p>The first two lines assign variables: a was assigned with a value of
+5, b was assigned with a vector of values between 2 and 20. The last two
+lines simply print the contents of each variable.</p>
+</div>
+<div id="excercise-3" class="section level2">
+<h2>Excercise 3</h2>
+<pre class="r"><code>sum1 &lt;- a + b
+sum2 &lt;- sum(a,b)</code></pre>
+<p><code>sum()</code> gives a different result than <code>+</code>.
+<code>+</code> adds a to each value in b, giving a vector of 19
+elements. <code>sum()</code> adds all values in b and a, giving the
+total as a single value.</p>
+</div>
+<div id="excercise-4" class="section level2">
+<h2>Excercise 4</h2>
+<pre class="r"><code>b[5] + b[10]</code></pre>
+<pre><code>## [1] 17</code></pre>
+<p>The sum of the 5th and 10th elements of b is 17.</p>
+</div>
+<div id="excercise-5" class="section level2">
+<h2>Excercise 5</h2>
+<pre class="r"><code>b[3] + b[8] + b[10]</code></pre>
+<pre><code>## [1] 24</code></pre>
+<p>The sum of the 3rd, 8th, and 10th elements of b is 24.</p>
+</div>
+</div>
+<div id="dimensional-objects" class="section level1">
+<h1>2 Dimensional Objects</h1>
+<div id="excercise-6" class="section level2">
+<h2>Excercise 6</h2>
+<p>When extracting from a 2-dimensional object, the <strong>first number
+specifies rows</strong> and the <strong>second number specifies
+columns</strong>.<br />
+<br />
+<code>m[3,]</code> extracts all elements in row 3.<br />
+<br />
+To extract the 3rd, 4th, and 5th columns as one object, you must type
+<code>m[,3:5]</code>.</p>
+</div>
+<div id="excercise-7" class="section level2">
+<h2>Excercise 7</h2>
+<pre class="r"><code>m &lt;- matrix(data=1:25,ncol=5,byrow=T)
+cbind(m,101:105)</code></pre>
+<pre><code>##      [,1] [,2] [,3] [,4] [,5] [,6]
+## [1,]    1    2    3    4    5  101
+## [2,]    6    7    8    9   10  102
+## [3,]   11   12   13   14   15  103
+## [4,]   16   17   18   19   20  104
+## [5,]   21   22   23   24   25  105</code></pre>
+<p><code>cbind()</code> adds a new column to the right side of the
+table. The first dimension specifies the data table, <em>m</em> in this
+case. The second dimension specifics the contents of the new column,
+which are values between 101 and 105 in this case.</p>
+</div>
+</div>
 
 
 
