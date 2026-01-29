@@ -57,3 +57,5 @@ m <- matrix(data=1:25,ncol=5,byrow=T)
 cbind(m,101:105)
 ```
 ```cbind()``` adds a new column to the right side of the table.  The first dimension specifies the data table, *m* in this case.  The second dimension specifics the contents of the new column, which are values between 101 and 105 in this case.
+
+## Excercise 8
